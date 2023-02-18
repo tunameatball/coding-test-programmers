@@ -13,3 +13,10 @@ function solution(food) {
 
   return answer;
 }
+
+function solution(food) {
+  return food.reduceRight((answer, value, index) => {
+    const number = String(index).repeat(parseInt(value/2))
+    return `${number}${answer}${number}`
+  }, '0');
+}
